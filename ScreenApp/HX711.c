@@ -415,7 +415,7 @@ void medianFilter(void)
 
 #else
 
-#define IGNORE_LAST   2
+#define IGNORE_LAST   4
 
 // 5th order
 /**
@@ -494,8 +494,8 @@ void computeAverages(void)
       sumFront += frontFilteredValues[i];
       sumBack  += backFilteredValues[i];
    }
-   sumFront /= (SAMPLE_SIZE-5);
-   sumBack  /= (SAMPLE_SIZE-5);
+   sumFront /= (SAMPLE_SIZE-IGNORE_LAST);
+   sumBack  /= (SAMPLE_SIZE-IGNORE_LAST);
    taskENTER_CRITICAL();
    currentFrontAverage = sumFront;
    currentBackAverage = sumBack;
