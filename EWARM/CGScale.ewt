@@ -1169,13 +1169,43 @@
     <group>
       <name>User</name>
       <file>
+        <name>$PROJ_DIR$\..\Src\CalData.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\crc.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\FlashInterface.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\font12.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\font16.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\font20.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\font24.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\font8.c</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\Src\freertos.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\ScreenApp\HX711.c</name>
+        <name>$PROJ_DIR$\..\Src\HX711.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\ili9341.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\Src\main.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\ScreenApp.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\Src\stm32f429i_discovery.c</name>
@@ -1197,6 +1227,12 @@
       </file>
       <file>
         <name>$PROJ_DIR$\..\Src\stm32f4xx_it.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\stmpe811.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\ts_calibration.c</name>
       </file>
     </group>
   </group>
@@ -1319,30 +1355,6 @@
         <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\timers.c</name>
       </file>
     </group>
-  </group>
-  <group>
-    <name>ScreenApp</name>
-    <file>
-      <name>$PROJ_DIR$\..\ScreenApp\CalData.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\ScreenApp\crc.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\ScreenApp\FlashInterface.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\ScreenApp\ili9341.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\ScreenApp\ScreenApp.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\ScreenApp\stmpe811.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\ScreenApp\ts_calibration.c</name>
-    </file>
   </group>
 </project>
 

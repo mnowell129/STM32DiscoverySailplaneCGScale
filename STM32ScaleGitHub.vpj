@@ -1,0 +1,390 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+   WorkingDir="."
+   Version="10.0"
+   VendorName="SlickEdit"
+   TemplateName="IAR 7.80.4"
+   Customized="1">
+   <Config
+      Name="Release"
+      OutputFile=""
+      CompilerConfigName="">
+      <Menu>
+         <Target
+            Name="Compile"
+            MenuCaption="&amp;Compile"
+            CaptureOutputWith="ProcessBuffer"
+            SaveOption="SaveCurrent"
+            RunFromDir="%rw">
+            <Exec/>
+         </Target>
+         <Target
+            Name="Build"
+            MenuCaption="&amp;Build"
+            CaptureOutputWith="ProcessBuffer"
+            SaveOption="SaveWorkspaceFiles"
+            RunFromDir="%rw">
+            <Exec/>
+         </Target>
+         <Target
+            Name="Rebuild"
+            MenuCaption="&amp;Rebuild"
+            CaptureOutputWith="ProcessBuffer"
+            SaveOption="SaveWorkspaceFiles"
+            RunFromDir="%rw">
+            <Exec/>
+         </Target>
+         <Target
+            Name="Debug"
+            MenuCaption="&amp;Debug"
+            SaveOption="SaveNone"
+            RunFromDir="%rw">
+            <Exec/>
+         </Target>
+         <Target
+            Name="Execute"
+            MenuCaption="E&amp;xecute"
+            SaveOption="SaveNone"
+            RunFromDir="%rw">
+            <Exec CmdLine='"STM32ScaleGitHub.exe"'/>
+         </Target>
+      </Menu>
+      <Includes>
+         <Include Dir="C:/Program Files (x86)/IAR Systems/Embedded Workbench 7.80.4/arm/inc/c/"/>
+         <Include Dir="C:/Program Files (x86)/IAR Systems/Embedded Workbench 7.80.4/arm/inc/asm/"/>
+         <Include Dir="C:/Program Files (x86)/IAR Systems/Embedded Workbench 7.80.4/arm/CMSIS/Include/"/>
+         <Include Dir="C:/Program Files (x86)/IAR Systems/Embedded Workbench 7.80.4/arm/src/lib/"/>
+         <Include Dir="C:/Program Files (x86)/IAR Systems/Embedded Workbench 7.80.4/arm/src/lib/dlib/"/>
+         <Include Dir="C:/Program Files (x86)/IAR Systems/Embedded Workbench 7.80.4/arm/src/lib/init/"/>
+      </Includes>
+   </Config>
+   <CustomFolders>
+      <Folder
+         Name="Source Files"
+         Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.c++;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.scala;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl;*.d;*.m;*.mm;*.go;*.groovy;*.gsh"
+         GUID="{6BA8DD42-5320-4BFA-C852-EDE039794394}"></Folder>
+      <Folder
+         Name="Header Files"
+         Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.h++;*.inc;*.sh;*.cpy;*.if"
+         GUID="{7A401A69-F82E-4775-4F5D-E65681CE12A8}"></Folder>
+      <Folder
+         Name="Resource Files"
+         Filters="*.ico;*.cur;*.dlg"
+         GUID="{2D45ACE5-6BD5-4005-2BAF-07568C8CD5BA}"/>
+      <Folder
+         Name="Bitmaps"
+         Filters="*.bmp"
+         GUID="{1BD4A1DF-017D-4115-81A1-40E3B5F8F7BB}"/>
+      <Folder
+         Name="Other Files"
+         Filters=""
+         GUID="{A020B789-0091-46FC-76D3-1C3D58EEFA87}"></Folder>
+   </CustomFolders>
+   <Files AutoFolders="DirectoryView">
+      <Folder Name="Drivers">
+         <Folder Name="CMSIS">
+            <Folder Name="Device">
+               <Folder Name="ST">
+                  <Folder Name="STM32F4xx">
+                     <Folder Name="Include">
+                        <F N="Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h"/>
+                        <F N="Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"/>
+                        <F N="Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"/>
+                     </Folder>
+                  </Folder>
+               </Folder>
+            </Folder>
+            <Folder Name="Include">
+               <F N="Drivers/CMSIS/Include/arm_common_tables.h"/>
+               <F N="Drivers/CMSIS/Include/arm_const_structs.h"/>
+               <F N="Drivers/CMSIS/Include/arm_math.h"/>
+               <F N="Drivers/CMSIS/Include/cmsis_armcc.h"/>
+               <F N="Drivers/CMSIS/Include/cmsis_armcc_V6.h"/>
+               <F N="Drivers/CMSIS/Include/cmsis_gcc.h"/>
+               <F N="Drivers/CMSIS/Include/core_cm0.h"/>
+               <F N="Drivers/CMSIS/Include/core_cm0plus.h"/>
+               <F N="Drivers/CMSIS/Include/core_cm3.h"/>
+               <F N="Drivers/CMSIS/Include/core_cm4.h"/>
+               <F N="Drivers/CMSIS/Include/core_cm7.h"/>
+               <F N="Drivers/CMSIS/Include/core_cmFunc.h"/>
+               <F N="Drivers/CMSIS/Include/core_cmInstr.h"/>
+               <F N="Drivers/CMSIS/Include/core_cmSimd.h"/>
+               <F N="Drivers/CMSIS/Include/core_sc000.h"/>
+               <F N="Drivers/CMSIS/Include/core_sc300.h"/>
+            </Folder>
+         </Folder>
+         <Folder Name="STM32F4xx_HAL_Driver">
+            <Folder Name="Inc">
+               <Folder Name="Legacy">
+                  <F N="Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h"/>
+                  <F N="Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32f4xx_hal_can_legacy.h"/>
+               </Folder>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32_assert_template.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32F429DeviceAll.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cec.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_conf_template.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cryp.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cryp_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dcmi.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dcmi_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi2c.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi2c_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hash.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hash_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_irda.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_mmc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_nand.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_nor.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pccard.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sai.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sai_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sd.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sdram.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_smartcard.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_usart.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_wwdg.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_crc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dac.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma2d.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_i2c.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_iwdg.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_lptim.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rng.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rtc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_sdmmc.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_wwdg.h"/>
+            </Folder>
+            <Folder Name="Src">
+               <Folder Name="Legacy">
+                  <F N="Drivers/STM32F4xx_HAL_Driver/Src/Legacy/stm32f4xx_hal_can.c"/>
+               </Folder>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cryp.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cryp_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpi2c.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpi2c_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_smartcard.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spdifrx.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_crc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dac.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma2d.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_i2c.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_lptim.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_pwr.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rng.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rtc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c"/>
+               <F N="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c"/>
+            </Folder>
+         </Folder>
+      </Folder>
+      <Folder Name="EWARM">
+         <Folder Name="settings">
+            <F N="EWARM/settings/CGScale.CGScale.cspy.bat"/>
+         </Folder>
+         <F N="EWARM/startup_stm32f429xx.s"/>
+      </Folder>
+      <Folder Name="Inc">
+         <F N="Inc/ascii.h"/>
+         <F N="Inc/CalData.h"/>
+         <F N="Inc/crc.h"/>
+         <F N="Inc/FlashInterface.h"/>
+         <F N="Inc/fonts.h"/>
+         <F N="Inc/FreeRtosAll.h"/>
+         <F N="Inc/FreeRTOSConfig.h"/>
+         <F N="Inc/HX711.h"/>
+         <F N="Inc/ili9341.h"/>
+         <F N="Inc/io.h"/>
+         <F N="Inc/lcd.h"/>
+         <F N="Inc/logo.h"/>
+         <F N="Inc/main.h"/>
+         <F N="Inc/ScreenApp.h"/>
+         <F N="Inc/stm32f4xx_hal_conf.h"/>
+         <F N="Inc/stm32f4xx_it.h"/>
+         <F N="Inc/stmpe811.h"/>
+         <F N="Inc/ts.h"/>
+         <F N="Inc/ts_calibration.h"/>
+         <F N="Inc/tsensor.h"/>
+         <F N="Inc/type.h"/>
+      </Folder>
+      <Folder Name="Middlewares">
+         <Folder Name="Third_Party">
+            <Folder Name="FreeRTOS">
+               <Folder Name="Source">
+                  <Folder Name="CMSIS_RTOS">
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h"/>
+                  </Folder>
+                  <Folder Name="include">
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOSConfig_template.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/list.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/portable.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/task.h"/>
+                     <F N="Middlewares/Third_Party/FreeRTOS/Source/include/timers.h"/>
+                  </Folder>
+                  <Folder Name="portable">
+                     <Folder Name="IAR">
+                        <Folder Name="ARM_CM4F">
+                           <F N="Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F/port.c"/>
+                           <F N="Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F/portasm.s"/>
+                           <F N="Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM4F/portmacro.h"/>
+                        </Folder>
+                     </Folder>
+                     <Folder Name="MemMang">
+                        <F N="Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c"/>
+                     </Folder>
+                  </Folder>
+                  <F N="Middlewares/Third_Party/FreeRTOS/Source/croutine.c"/>
+                  <F N="Middlewares/Third_Party/FreeRTOS/Source/event_groups.c"/>
+                  <F N="Middlewares/Third_Party/FreeRTOS/Source/list.c"/>
+                  <F N="Middlewares/Third_Party/FreeRTOS/Source/queue.c"/>
+                  <F N="Middlewares/Third_Party/FreeRTOS/Source/tasks.c"/>
+                  <F N="Middlewares/Third_Party/FreeRTOS/Source/timers.c"/>
+               </Folder>
+            </Folder>
+         </Folder>
+      </Folder>
+      <Folder Name="Src">
+         <F N="Src/arrow1.c"/>
+         <F N="Src/arrow2.c"/>
+         <F N="Src/arrow3.c"/>
+         <F N="Src/arrow4.c"/>
+         <F N="Src/CalData.c"/>
+         <F N="Src/crc.c"/>
+         <F N="Src/FlashInterface.c"/>
+         <F N="Src/font12.c"/>
+         <F N="Src/font16.c"/>
+         <F N="Src/font20.c"/>
+         <F N="Src/font24.c"/>
+         <F N="Src/font8.c"/>
+         <F N="Src/freertos.c"/>
+         <F N="Src/HX711.c"/>
+         <F N="Src/ili9341.c"/>
+         <F N="Src/logo.c"/>
+         <F N="Src/main.c"/>
+         <F N="Src/ScreenApp.c"/>
+         <F N="Src/stm32f429i_discovery.c"/>
+         <F N="Src/stm32f429i_discovery.h"/>
+         <F N="Src/stm32f429i_discovery_io.c"/>
+         <F N="Src/stm32f429i_discovery_io.h"/>
+         <F N="Src/stm32f429i_discovery_lcd.c"/>
+         <F N="Src/stm32f429i_discovery_lcd.h"/>
+         <F N="Src/stm32f429i_discovery_sdram.c"/>
+         <F N="Src/stm32f429i_discovery_sdram.h"/>
+         <F N="Src/stm32f429i_discovery_ts.c"/>
+         <F N="Src/stm32f429i_discovery_ts.h"/>
+         <F N="Src/stm32f4xx_hal_msp.c"/>
+         <F N="Src/stm32f4xx_it.c"/>
+         <F N="Src/stmpe811.c"/>
+         <F N="Src/system_stm32f4xx.c"/>
+         <F N="Src/ts_calibration.c"/>
+      </Folder>
+   </Files>
+</Project>

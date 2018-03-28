@@ -138,7 +138,7 @@ typedef signed short Int16;
 //
 // End of signed 16 bit types
 //
-typedef unsigned int uint32;
+//typedef unsigned int uint32;
 //
 // Start of 32 bit unsigned types
 //
@@ -155,7 +155,7 @@ typedef unsigned int uint32;
 #define UINT     uint32
 #endif
 #ifndef uint
-#define uint     uint32
+//#define uint     uint32
 #endif
 #ifndef UINT32
 #define UINT32   uint32
