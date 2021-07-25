@@ -163,8 +163,14 @@ void BSP_TS_GetState(TS_StateTypeDef* TsState)
   {
     TsDrv->GetXY(TS_I2C_ADDRESS, &x, &y);
     
+    #define REVE
+    #ifdef REVE
+      /* y axis is swapped in STM32F429I_Disco RevD and RevE boards */
+    y = 3650 - y;
+    #else
     /* Y value first correction */
     y -= 360;  
+    #endif
     
     /* Y value second correction */
     yr = y / 11;

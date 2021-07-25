@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.80.4\common\bin\cspybat" -f "M:\Dropbox\PersonalProjects\STM32DiscoverySailplaneCGScale\EWARM\settings\CGScale.CGScale.general.xcl" --backend -f "M:\Dropbox\PersonalProjects\STM32DiscoverySailplaneCGScale\EWARM\settings\CGScale.CGScale.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.42.1\common\bin\cspybat" -f "C:\Work\Scale\EWARM\settings\CGScale.CGScale.general.xcl" --backend -f "C:\Work\Scale\EWARM\settings\CGScale.CGScale.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.80.4\common\bin\cspybat" -f "M:\Dropbox\PersonalProjects\STM32DiscoverySailplaneCGScale\EWARM\settings\CGScale.CGScale.general.xcl" "--debug_file=%~1" --backend -f "M:\Dropbox\PersonalProjects\STM32DiscoverySailplaneCGScale\EWARM\settings\CGScale.CGScale.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.42.1\common\bin\cspybat" -f "C:\Work\Scale\EWARM\settings\CGScale.CGScale.general.xcl" "--debug_file=%~1" --backend -f "C:\Work\Scale\EWARM\settings\CGScale.CGScale.driver.xcl" 
 
 @echo off 
 :end
