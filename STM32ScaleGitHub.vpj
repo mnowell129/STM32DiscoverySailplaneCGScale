@@ -285,6 +285,7 @@
          <F N="Inc/ascii.h"/>
          <F N="Inc/CalData.h"/>
          <F N="Inc/crc.h"/>
+         <F N="Inc/fish.h"/>
          <F N="Inc/FlashInterface.h"/>
          <F N="Inc/fonts.h"/>
          <F N="Inc/FreeRtosAll.h"/>
@@ -358,6 +359,8 @@
          <F N="Src/arrow4.c"/>
          <F N="Src/CalData.c"/>
          <F N="Src/crc.c"/>
+         <F N="Src/fish.c"/>
+         <F N="Src/fish2.c"/>
          <F N="Src/FlashInterface.c"/>
          <F N="Src/font12.c"/>
          <F N="Src/font16.c"/>

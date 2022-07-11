@@ -1203,6 +1203,15 @@
                 <name>$PROJ_DIR$\..\Src\crc.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\Src\fish.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Src\fish2.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Src\fish3.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Src\FlashInterface.c</name>
             </file>
             <file>

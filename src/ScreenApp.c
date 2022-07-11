@@ -108,7 +108,10 @@
 
 // Ugly, but too lazy to write a script
 // to put headers on these and build as separate files.
-#include "logo.h"
+
+#include "fish.h"
+#include "fish2.h"
+#include "fish3.h"
 #include "Arrow1.h"
 #include "Arrow2.h"
 #include "Arrow3.h"
@@ -1342,11 +1345,28 @@ void runOperation(void)
 void drawRootMenu(void)
 {
    BSP_LCD_Clear(LCD_COLOR_BLACK);
-   button(120,50,40,"Cal",LCD_COLOR_RED,LCD_COLOR_WHITE);
-   button(120,150,40,"Tare",LCD_COLOR_YELLOW,LCD_COLOR_BLACK);
-   button(120,250,40,"Run",LCD_COLOR_GREEN,LCD_COLOR_BLACK);
+   button(120,50,40,"Stop",LCD_COLOR_RED,LCD_COLOR_WHITE);
+   button(120,150,40,"Slow",LCD_COLOR_YELLOW,LCD_COLOR_BLACK);
+   button(120,250,40,"Go",LCD_COLOR_GREEN,LCD_COLOR_BLACK);
 
 }
+
+void showFish2(void)
+{
+   BSP_LCD_Clear(LCD_COLOR_WHITE);
+   //BSP_LCD_DrawBitmap2(35,50,(uint8_t *)pic_logo_bmp,y_logo_bmp,x_logo_bmp,16);
+   // BSP_LCD_Clear(LCD_COLOR_BLACK);
+   BSP_LCD_DrawBitmap2(35,50,(uint8_t *)pic_fish2_bmp,y_fish2_bmp,x_fish2_bmp,16);
+}
+void showFish3(void)
+{
+   BSP_LCD_Clear(LCD_COLOR_WHITE);
+   //BSP_LCD_DrawBitmap2(35,50,(uint8_t *)pic_logo_bmp,y_logo_bmp,x_logo_bmp,16);
+   // BSP_LCD_Clear(LCD_COLOR_BLACK);
+   BSP_LCD_DrawBitmap2(35,50,(uint8_t *)pic_fish3_bmp,y_fish3_bmp,x_fish3_bmp,16);
+}
+
+void showLogo(void);
 
 /**
  * Do the root menu after startup. 
@@ -1389,36 +1409,24 @@ void rootMenu(void)
          switch(buttonNumber)
          {
             case 0:
-               button(120,50,40,"Cal",LCD_COLOR_DARKGRAY,LCD_COLOR_WHITE);
-               vTaskDelay(500);
-               button(120,50,40,"Cal",LCD_COLOR_RED,LCD_COLOR_WHITE);
-               if(calibrationOperation(false))
-               {
-                  updateScaleCalibration(&scaleCalibrationData);
-                  BSP_LCD_Clear(LCD_COLOR_BLACK);
-                  printfLCD(120,120,LCD_COLOR_WHITE,LCD_COLOR_BLACK,&Font24,CENTER_MODE,"Saving");
-                  printfLCD(120,150,LCD_COLOR_WHITE,LCD_COLOR_BLACK,&Font24,CENTER_MODE,"Please wait!");
-                  pushCalToFlash();
-               }
-               else
-               {
-                  // restore the old data if we cancel
-                  loadScaleCalibration(&scaleCalibrationData);
-               }
+               button(120,50,40,"Stop",LCD_COLOR_DARKGRAY,LCD_COLOR_WHITE);
+               showFish3();
+               vTaskDelay(1000);
                drawRootMenu();
                break;
             case 1:
-               button(120,150,40,"Tare",LCD_COLOR_DARKGRAY,LCD_COLOR_WHITE);
-               vTaskDelay(500);
-               button(120,150,40,"Tare",LCD_COLOR_YELLOW,LCD_COLOR_BLACK);
-               tareOperation();
+               button(120,150,40,"Slow",LCD_COLOR_DARKGRAY,LCD_COLOR_WHITE);
+               showFish2();
+               vTaskDelay(1000);
                drawRootMenu();
                break;
             case 2:
-               button(120,250,40,"Run",LCD_COLOR_DARKGRAY,LCD_COLOR_WHITE);
-               vTaskDelay(500);
-               button(120,250,40,"Run",LCD_COLOR_GREEN,LCD_COLOR_BLACK);
-               runOperation();
+               button(120,250,40,"Go",LCD_COLOR_DARKGRAY,LCD_COLOR_WHITE);
+               //vTaskDelay(500);
+               // button(120,250,40,"Go",LCD_COLOR_GREEN,LCD_COLOR_BLACK);
+               //runOperation();
+               showLogo();
+               vTaskDelay(1000);
                drawRootMenu();
                break;
          }
@@ -1439,9 +1447,9 @@ void splash(void)
    BSP_LCD_SetBackColor(LCD_COLOR_YELLOW);
 
    BSP_LCD_SetFont(&Font24);
-   BSP_LCD_DisplayStringAt(120,BSP_LCD_GetYSize() / 2 - 44,(uint8_t *)"Kyle's",CENTER_MODE);
+   BSP_LCD_DisplayStringAt(120,BSP_LCD_GetYSize() / 2 - 44,(uint8_t *)"Thomas's",CENTER_MODE);
    BSP_LCD_DisplayStringAt(120,BSP_LCD_GetYSize() / 2 - 12,(uint8_t *)"Awesome",CENTER_MODE);
-   BSP_LCD_DisplayStringAt(120,BSP_LCD_GetYSize() / 2 + 30,(uint8_t *)"Scale",CENTER_MODE);
+   BSP_LCD_DisplayStringAt(120,BSP_LCD_GetYSize() / 2 + 30,(uint8_t *)"Screen",CENTER_MODE);
 
    BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
    {
@@ -1470,7 +1478,9 @@ void splash(void)
 void showLogo(void)
 {
    BSP_LCD_Clear(LCD_COLOR_WHITE);
-   BSP_LCD_DrawBitmap2(35,50,(uint8_t *)pic_logo_bmp,y_logo_bmp,x_logo_bmp,16);
+   //BSP_LCD_DrawBitmap2(35,50,(uint8_t *)pic_logo_bmp,y_logo_bmp,x_logo_bmp,16);
+   // BSP_LCD_Clear(LCD_COLOR_BLACK);
+   BSP_LCD_DrawBitmap2(35,50,(uint8_t *)pic_fish_bmp,y_fish_bmp,x_fish_bmp,16);
 }
 
 /* Private functions ---------------------------------------------------------*/
@@ -1524,8 +1534,8 @@ void screenApp(void)
    // All the custom code
    splash();
    vTaskDelay(500);
-   showLogo();
-   vTaskDelay(1000);
+   //showLogo();
+   // vTaskDelay(3000);
    // startup order is important
    // this can start now.
    startHX711Task();

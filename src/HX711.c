@@ -680,6 +680,8 @@ bool isBackReady(void)
    return(READ_BACK_DATA() ? false : true);
 }
 
+int32_t servoPulse = 1500;
+
 volatile int32_t delta;
 /**
  * Basic hx711 task. 
@@ -709,23 +711,29 @@ void hx711TaskFunction(void *argument)
    setupCpuCycles();
 
    setupHX711Pins();
-   hx711PowerDown();
-   vTaskDelay(5);
+//   hx711PowerDown();
+//   vTaskDelay(5);
 
-   setupHX711FrontInterrupt();
-   setupHX711BackInterrupt();
+//   setupHX711FrontInterrupt();
+//   setupHX711BackInterrupt();
 
-   enableFrontInterrupt();
-   enableBackInterrupt();
+//   enableFrontInterrupt();
+//   enableBackInterrupt();
 
-   hx711PowerUp();
+//   hx711PowerUp();
 
    while(1)
    {
+      BACK_CLOCK_HIGH();
+      delayMicroSeconds(servoPulse);
+      BACK_CLOCK_LOW();
+      vTaskDelay(19);
+      continue;
+      #if 0
       queueResult = xQueueReceive(hx711Queue,(void *)&(queueReceiveValue),portMAX_DELAY);
       // avoid compiler warning
       (void)queueResult;
-      #if 0
+
       // Debug to test.
       // manually polls the done bit.
       // not needed after interrupts are working
@@ -740,7 +748,7 @@ void hx711TaskFunction(void *argument)
          value = readSensor(readBackBit,backGain);
          putBack(value);
       }
-      #endif
+
 
       // convert pointer back to the int passed.
       whichInterrupt = (uint32_t)queueReceiveValue;
@@ -765,6 +773,7 @@ void hx711TaskFunction(void *argument)
       {
          // ?? not likely, but don't do something stupid
       }
+            #endif
    }
 
 }

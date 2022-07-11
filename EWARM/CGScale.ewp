@@ -112,7 +112,7 @@
                 </option>
                 <option>
                     <name>RTConfigPath2</name>
-                    <state>$TOOLKIT_DIR$\INC\c\DLib_Config_Full.h</state>
+                    <state>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</state>
                 </option>
                 <option>
                     <name>GBECoreSlave</name>
@@ -198,7 +198,7 @@
                 </option>
                 <option>
                     <name>DSPExtension</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>TrustZone</name>
@@ -1017,7 +1017,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>###Unitialized###</state>
+                    <state>CGScale_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1083,6 +1083,15 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Src\crc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Src\fish.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Src\fish2.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Src\fish3.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Src\FlashInterface.c</name>
